@@ -1,6 +1,5 @@
 import itertools
-from datetime import datetime
-from typing import List, Dict, Set
+from typing import List, Dict
 
 from file_utils import file_reader
 
@@ -24,7 +23,6 @@ def find_correct_operators(lines: List[str], part_2: bool) -> int:
                 counter += current_sum
                 break
 
-    end = datetime.now()
     return counter
 
 
