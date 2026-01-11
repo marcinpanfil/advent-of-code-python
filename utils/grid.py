@@ -1,5 +1,7 @@
 from typing import List
 
+from IntPoint import IntPoint
+
 
 def char_at(grid: List[str], x: int, y: int) -> str | None:
     if y < 0 or y >= len(grid):
@@ -37,3 +39,12 @@ def replace_chars(grid: List[str], start_x: int, start_y: int, new_chars: str) -
     grid[start_y] = updated_row
 
     return grid
+
+
+def find_first_char(grid: List[str], to_find: str) -> IntPoint | None:
+    if to_find is not None:
+        for y, line in enumerate(grid):
+            for x, char in enumerate(line):
+                if char == to_find:
+                    return IntPoint(x, y)
+    return None
