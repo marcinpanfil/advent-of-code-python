@@ -1,6 +1,6 @@
 from typing import List
 
-from IntPoint import IntPoint
+from utils.IntPoint import IntPoint
 
 
 def char_at(grid: List[str], x: int, y: int) -> str | None:
